@@ -6,6 +6,7 @@ export function drive_state(fast_driver: boolean) {
     const lon = faker.location.longitude()
 
     const moderate_speed = faker.number.int({ min: 10, max: 60 })
+    console.log("fast_driver", fast_driver)
     const high_speed = faker.number.int({ min: 50, max: 100 })
 
     const speed = fast_driver? high_speed : moderate_speed

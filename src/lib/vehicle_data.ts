@@ -292,7 +292,6 @@ import { vehicle_state } from "./vehicle_state";
 import { drive_state } from "./drive_state";
 
 export function vehicle_data(high_mileage: boolean, fast_driver: boolean) {
-
     const result = {
         "id": faker.number.int(256), 
         "vin": faker.vehicle.vin(),
