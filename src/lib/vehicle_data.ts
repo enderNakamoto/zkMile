@@ -297,7 +297,8 @@ export function vehicle_data(high_mileage: boolean, fast_driver: boolean) {
         "vin": faker.vehicle.vin(),
         "color": faker.color.human(),
         "vehicle_state": vehicle_state(high_mileage),
-        "drive_state": drive_state(fast_driver)
+        "drive_state": drive_state(fast_driver), 
+        "publicKey": "B62qnoqj4cxkPLprnCrb2sD6noSJzurewoAKdWgQphiuvGT9Vdtt5ih"
    }
     return result; 
 }
