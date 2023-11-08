@@ -291,14 +291,13 @@ import { faker } from '@faker-js/faker';
 import { vehicle_state } from "./vehicle_state";
 import { drive_state } from "./drive_state";
 
-export function vehicle_data(high_mileage: boolean, fast_driver: boolean) {
+export function vehicle_data(carId: string, high_mileage: boolean, fast_driver: boolean) {
     const result = {
-        "id": faker.number.int(256), 
+        "id": carId, 
         "vin": faker.vehicle.vin(),
         "color": faker.color.human(),
         "vehicle_state": vehicle_state(high_mileage),
-        "drive_state": drive_state(fast_driver), 
-        "publicKey": "B62qnoqj4cxkPLprnCrb2sD6noSJzurewoAKdWgQphiuvGT9Vdtt5ih"
+        "drive_state": drive_state(fast_driver)
    }
     return result; 
 }

@@ -1,3 +1,4 @@
+// @ts-ignore
 import Client from 'mina-signer';
 
 const client = new Client({ network: 'testnet' });
