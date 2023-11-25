@@ -7,16 +7,16 @@ export function drive_state(
     // if drive far, then the car has gone more than 200 miles from seattle 
     // Seattle lat, lon 47.608013, -122.335167
 
-    let max_lat = 55
-    let min_lat = 50
-    let max_lon = -125.5
-    let min_lon = -126.5
+    let max_lat = 48
+    let min_lat = 46
+    let max_lon = -121.5
+    let min_lon = -122.5
 
     if (drive_far){
-         max_lat = 48
-         min_lat = 46
-         max_lon = -121.5
-         min_lon = -122.5
+         max_lat = 55
+         min_lat = 50
+         max_lon = -125.5
+         min_lon = -126.5
     } 
 
     const lat = faker.location.latitude({
