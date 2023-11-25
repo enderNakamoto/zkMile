@@ -17,23 +17,32 @@ function getVehicleData(carId: string){
 
   let fast_driver = false
   let high_mileage = false
+  let drive_far = false 
 
   if (carId == "1"){
     fast_driver = true
     high_mileage = false 
+    drive_far = false 
   }
 
   if (carId == "2"){
     fast_driver = true
-    high_mileage = true 
+    high_mileage = true
+    drive_far = true 
   }
 
   if (carId == "3"){
-    fast_driver = true
-    high_mileage = true 
+    fast_driver = false
+    high_mileage = true
+    drive_far = false 
   }
 
-  const result = vehicle_data(carId, high_mileage, fast_driver);
+  const result = vehicle_data(
+    carId, 
+    high_mileage, 
+    fast_driver,
+    drive_far
+    );
   
   const signature = client.signFields(
     [BigInt(carId), BigInt(result["vehicle_state"]["odometer"])],

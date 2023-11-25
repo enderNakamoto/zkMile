@@ -1,9 +1,34 @@
 import { faker } from '@faker-js/faker';
 
-export function drive_state(fast_driver: boolean) {
+export function drive_state(
+    fast_driver: boolean, 
+    drive_far: boolean
+) {
+    // if drive far, then the car has gone more than 200 miles from seattle 
+    // Seattle lat, lon 47.608013, -122.335167
 
-    const lat = faker.location.latitude()
-    const lon = faker.location.longitude()
+    let max_lat = 55
+    let min_lat = 50
+    let max_lon = -125.5
+    let min_lon = -126.5
+
+    if (drive_far){
+         max_lat = 48
+         min_lat = 46
+         max_lon = -121.5
+         min_lon = -122.5
+    } 
+
+    const lat = faker.location.latitude({
+        max: max_lat, 
+        min: min_lat, 
+        precision: 6
+    })
+    const lon = faker.location.longitude({
+        max: max_lon, 
+        min: min_lon,
+        precision: 6
+    })
 
     const moderate_speed = faker.number.int({ min: 10, max: 60 })
     console.log("fast_driver", fast_driver)
